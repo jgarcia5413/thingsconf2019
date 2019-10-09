@@ -1,0 +1,59 @@
+<b id="device"></b>
+<div id="myChart"></div>
+
+<!-- Google chart libraries -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  // global variables
+  var myData, device_name, count;
+  
+  // initialise
+  window.onload = function() {
+    //fudge to change &quot; to "
+    const r = /&quot;/gi
+    let p = '{{data}}'
+    myData = JSON.parse(p.replace(r, '"'));
+    
+    console.log(myData)
+
+    let parsedUrl = new URL(window.location.href);
+    device_name = parsedUrl.searchParams.get("device")
+    count = parsedUrl.searchParams.get("count")
+    
+    google.charts.load('current', {'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+  }
+  
+  // this is where we build the chart
+  function drawChart(){
+    
+    var chartOptions = {
+      chartArea: {
+        left: 40,
+        width: '100%'
+      },
+      width: '100%',
+      title: 'rssi & snr for ' + device_name + ', most recent ' + myData.rssi.length + ' values',
+      legend: 'none',
+      colors: ['red', 'green'],
+      lineWidth: 3
+    };
+    
+    var chartData = new google.visualization.DataTable();
+    
+    chartData.addColumn('string', 'time');
+    chartData.addColumn('number', 'rssi');
+    chartData.addColumn('number', 'snr');
+
+    // note we fill the data in reverse so our chart reads from left to right
+    for (var i = myData.time.length; i > 0; i--) {
+      var row = [myData.time[i], myData.rssi[i], myData.snr[i]];
+      chartData.addRow(row);
+    }
+    
+    var tChart = new google.visualization.LineChart(document.getElementById('myChart'));
+    tChart.draw(chartData, chartOptions);
+    
+  }
+</script>

@@ -1,0 +1,33 @@
+{
+  "name": "thingsconf2019",
+  "version": "1.0.0",
+  "description": "retrieve LoRaWAN device data from mongodb database, show as graph",
+  "main": "viewer.js",
+  "scripts": {
+    "start": "node viewer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicbkw/thingsconf2019"
+  },
+  "keywords": [
+    "googlecharts",
+    "mqtt",
+    "mongodb",
+    "thethingsnetwork"
+  ],
+  "author": "Nic Burkinshaw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicbkw/thingsconf2019/issues"
+  },
+  "homepage": {
+    "url": ""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.5",
+    "mongodb": "^3.3.2",
+    "saslprep": "^1.0.3"
+  }
+}

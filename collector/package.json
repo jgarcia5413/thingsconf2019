@@ -1,0 +1,31 @@
+{
+  "name": "thingsconf2019-collector",
+  "version": "1.0.0",
+  "description": "aggregate data from ttn mqtt broker, store in mongo db",
+  "main": "collector.js",
+  "scripts": {
+    "start": "node collector.js"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicbkw/thingsconf2019"
+  },
+  "keywords": [
+    "googlecharts",
+    "mqtt",
+    "mongodb",
+    "thethingsnetwork"
+  ],
+  "author": "Nic Burkinshaw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicbkw/thingsconf2019/issues"
+  },
+  "homepage": {
+    "url": ""
+  },
+  "dependencies": {
+    "mongodb": "^3.3.2",
+    "ttn": "^2.3.3"
+  }
+}

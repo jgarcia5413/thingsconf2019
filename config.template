@@ -1,0 +1,26 @@
+// config.js
+// stores credentials and parameters
+// Author - Nic Burkinshaw nic@thinnovation.co.uk
+
+var config = {};
+
+// parameters for your personal TTN connection
+config.mqtt  = {};
+config.mqtt.namespace = process.env.MQTT_NAMESPACE || '+/devices/+/up';
+config.mqtt.protocol  = process.env.MQTT_PROTOCOL  || 'mqtts://';
+config.mqtt.hostname  = process.env.MQTT_HOSTNAME  || 'eu.thethings.network';
+config.mqtt.port      = process.env.MQTT_PORT      || 8883;
+config.mqtt.user      = process.env.MQTT_USER      || <USERNAME>;
+config.mqtt.password  = process.env.MQTT_PASSWORD  || <TOKEN>;
+config.mqtt.cafile    = process.env.MQTT_CAFILE    || 'mqtt-ca.pem';
+
+// parameters for your mongodb atlas instance
+config.mongodb = {};
+config.mongodb.user       = process.env.MONGODB_USER       || <USERNAME>;
+config.mongodb.password   = process.env.MONGODB_PASSWORD   || <PASSWORD>;
+config.mongodb.hostname   = process.env.MONGODB_HOSTNAME   || <SERVERNAME>;
+config.mongodb.port       = process.env.MONGODB_PORT       || 27017;
+config.mongodb.database   = process.env.MONGODB_DATABASE   || <DATBASENAME>;
+config.mongodb.collection = process.env.MONGODB_COLLECTION || <COLLECTIONNAME>;
+
+module.exports = config;
