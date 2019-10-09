@@ -3,8 +3,7 @@
 # Also required is an internet connection and nodejs LTS (I tested this with v11.6.0) installed
 # You should be familiar with nodeJS to follow these instructions!
 
-Just a hint - basic items are named differently in SQL and NoSQL databases
-  database in both is the same, tables in SQL are collections in NoSQL, records in SQL are documents in NoSQL
+Just a hint - basic items are named differently in SQL and NoSQL databases. database in both is the same, tables in SQL are collections in NoSQL, records in SQL are documents in NoSQL.
 
 1. Create your own MongoDB Atlas database instance in the cloud: - https://www.mongodb.com/cloud/atlas - accept the defaults
 2. Take a note of your username, password, and server connection (similar to: ncbttn-f3ftfg.mongodb.net)
