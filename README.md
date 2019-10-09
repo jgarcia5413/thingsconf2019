@@ -1,4 +1,4 @@
-# Workshop at The Things Conference 2019 - how to collect your IoT data via MQTT, store in a NoSQL database, then display data as a graph
+# Workshop at The Things Conference UK 2019 - how to collect your IoT data via MQTT, store in a NoSQL database, then display data as a graph
 # This assumes you already have a LoRaWAN device and a registered account on thethingsnetwork.org
 # Also required is an internet connection and nodejs LTS (I tested this with v11.6.0) installed
 # You should be familiar with nodeJS to follow these instructions!
