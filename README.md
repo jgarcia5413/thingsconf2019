@@ -1,7 +1,7 @@
 # Workshop at The Things Conference UK 2019 - how to collect your IoT data via MQTT, store in a NoSQL database, then display data as a graph
-# This assumes you already have a LoRaWAN device and a registered account on thethingsnetwork.org
-# Also required is an internet connection and nodejs LTS (I tested this with v11.6.0) installed
-# You should be familiar with nodeJS to follow these instructions!
+# This assumes you already have a LoRaWAN device and a registered account on thethingsnetwork.org with access to the TTN console and a suitable application already created.
+# Also required is Node.js - tested with LTS (currently version 10.16.3) installed
+# You should be familiar with Node.js to follow these instructions!
 
 Just a hint - basic items are named differently in SQL and NoSQL databases. database in both is the same, tables in SQL are collections in NoSQL, records in SQL are documents in NoSQL.
 
@@ -11,10 +11,10 @@ Just a hint - basic items are named differently in SQL and NoSQL databases. data
 4. Open up your TTN console to the applications page, choose your application - https://console.thethingsnetwork.org/applications and make a note of your APPLICATION name and ACCESS KEY
 5. Copy config.template to config.js and replace the parameters in <> with the values obtained above.
 6. Copy your config.js into both collector and viewer folders
-7. Change to the collector folder and run npm install to install the required nodejs libraries - run npm start
+7. Change to the collector folder and run npm install to install the required nodejs libraries. When this has completed successfully - run npm start to run the collector.
 8. You will see a message 'db connected' each time a LoRaWAN device reports into TTN - a new document is inserted into your collection.
 9. Change to the viewer folder and run npm install to install the required nodejs libraries - run npm start
 10. You will see a message 'my app listening on PORT 3000'
-11. Open up a browser and display the Web Developer Tools Console
+11. Open up a web browser (I tested with both Firefox and Chrome) and display the Web Developer Tools Console
 11. Enter a URI similar to localhost:3000/?device=<VALIDDEVICENAME>&count=50 - replace <VALIDDEVICENAME> with that of your LoRAWAN device.
 12. You should see a chart grid with valid data, red for rssi and green for snr values
