@@ -20,7 +20,7 @@ config.mongodb.user       = process.env.MONGODB_USER       || <USERNAME>;
 config.mongodb.password   = process.env.MONGODB_PASSWORD   || <PASSWORD>;
 config.mongodb.hostname   = process.env.MONGODB_HOSTNAME   || <SERVERNAME>;
 config.mongodb.port       = process.env.MONGODB_PORT       || 27017;
-config.mongodb.database   = process.env.MONGODB_DATABASE   || <DATBASENAME>;
+config.mongodb.database   = process.env.MONGODB_DATABASE   || <DATABASENAME>;
 config.mongodb.collection = process.env.MONGODB_COLLECTION || <COLLECTIONNAME>;
 
 module.exports = config;
