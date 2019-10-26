@@ -1,5 +1,5 @@
 // collector.js
-// connects to personal TTN feed
+// connects to personal TTN feed using Node.js SDK
 // stores data in mongodb database
 // Author - Nic Burkinshaw nic@thinnovation.co.uk
 
@@ -8,7 +8,7 @@ const config = require('./config');
 
 const { insertDocument } = require('./mongo.js');
 
-ttn.data(config.mqtt.user, config.mqtt.password)
+ttn.data(config.ttn.user, config.ttn.password)
     .then(function (client) {
         client.on("uplink", function (devID, payload) {
             var messageObject = {
