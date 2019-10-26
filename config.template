@@ -5,14 +5,9 @@
 var config = {};
 
 // parameters for your personal TTN connection
-config.mqtt  = {};
-config.mqtt.namespace = process.env.MQTT_NAMESPACE || '+/devices/+/up';
-config.mqtt.protocol  = process.env.MQTT_PROTOCOL  || 'mqtts://';
-config.mqtt.hostname  = process.env.MQTT_HOSTNAME  || 'eu.thethings.network';
-config.mqtt.port      = process.env.MQTT_PORT      || 8883;
-config.mqtt.user      = process.env.MQTT_USER      || <USERNAME>;
-config.mqtt.password  = process.env.MQTT_PASSWORD  || <TOKEN>;
-config.mqtt.cafile    = process.env.MQTT_CAFILE    || 'mqtt-ca.pem';
+config.ttn  = {};
+config.ttn.user      = process.env.MQTT_USER      || <USERNAME>;
+config.ttn.password  = process.env.MQTT_PASSWORD  || <TOKEN>;
 
 // parameters for your mongodb atlas instance
 config.mongodb = {};
